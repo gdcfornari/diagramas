@@ -32,7 +32,7 @@ while continuar:
         print('Tarefa excluída')
     else:
 
-        verifica = int(input('Escreva o contato que deseja excluir: '))
+        verifica = int(input('Operação concluída com sucesso '))
 
     if verifica == "0":
         continue
