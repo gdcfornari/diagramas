@@ -1,0 +1,10 @@
+1:M
+RESTAURANTE: código, mesa, nome dos clientes 
+M:N
+PAGAMENTO: código, número_mesa, valor_total 
+M:N
+CLIENTES: código, nome, cpf, rg, telefone 
+M:N
+MESAS: código, capacidade, status 
+1:M
+COMANDAS: código, nome_prato, valor_prato
