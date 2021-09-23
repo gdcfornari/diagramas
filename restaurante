@@ -1,10 +1,41 @@
-1:M
-RESTAURANTE: código, mesa, nome dos clientes 
-M:N
-PAGAMENTO: código, número_mesa, valor_total 
-M:N
-CLIENTES: código, nome, cpf, rg, telefone 
-M:N
-MESAS: código, capacidade, status 
-1:M
-COMANDAS: código, nome_prato, valor_prato
+RESTAURANTE:
+id (PK)
+mesa,
+nome_clientes (chave-estrangeira)
+
+CLIENTES: 
+id (PK)
+nome
+cpf
+rg
+telefone
+
+COMANDAS:
+id (PK)
+nome_prato (chave-estrangeira)
+valor_prato
+
+MESAS:
+id (PK)	
+capacidade
+status
+
+PAGAMENTO:
+id (PK)
+número_mesa (chave-estrangeira)
+valor_total (chave-estrangeira)
+
+restaurante -> mesas
+= 1 M
+
+comanda -> pagamentos 
+= M 1
+
+comanda -> mesas
+= M N
+
+mesa -> clientes
+= M N
+
+clientes -> pagamentos
+= M 1
